@@ -1,4 +1,4 @@
-﻿using PokerDataAcess.Models;
+using PokerDataAcess.Models;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -47,7 +47,7 @@ namespace PokerDataAcess
 
                 return null;
             }
-   
+
 
         }
 
@@ -86,7 +86,7 @@ namespace PokerDataAcess
                 conn.Close();
 
                 return null;
-            }        
+            }
         }
 
         public static List<Bundle> Get(string criteria)
@@ -94,7 +94,7 @@ namespace PokerDataAcess
             string connectionString = ConfigurationManager.ConnectionStrings["DbConn"].ConnectionString;
             SqlConnection conn = new SqlConnection(connectionString);
             try
-            {          
+            {
                 conn.Open();
                 SqlDataAdapter da = new SqlDataAdapter("SELECT * from bundles where completion_criteria = " + criteria, conn);
                 DataTable dt = new DataTable();
@@ -120,12 +120,13 @@ namespace PokerDataAcess
                 conn.Close();
                 return null;
             }
-          
+
         }
 
         public static bool Add(Bundle bundles)
-        {            //string connectionString = ConfigurationManager.ConnectionStrings["DbConn"].ConnectionString;
-            string connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=C:\\USERS\\LITAL\\SOURCE\\REPOS\\POKER\\POKER\\DATABASE.MDF;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+        {
+            string connectionString = ConfigurationManager.ConnectionStrings["DbConn"].ConnectionString;
+            //string connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=C:\\USERS\\LITAL\\SOURCE\\REPOS\\POKER\\POKER\\DATABASE.MDF;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
             SqlConnection conn = new SqlConnection(connectionString);
 
             try
@@ -140,7 +141,7 @@ namespace PokerDataAcess
 
                 command.Parameters.AddWithValue("@Description", bundles.Description);
                 command.Parameters.AddWithValue("@CompletionCriteria", bundles.CompletionCriteria);
-              
+
 
                 da.InsertCommand = command;
                 int result = command.ExecuteNonQuery();
@@ -170,7 +171,7 @@ namespace PokerDataAcess
                 SqlDataAdapter da = new SqlDataAdapter();
                 string strUpdateCommand =
                       "Update bundles set Id = @Id, description = @Description, completion_criteria = @CompletionCriteria ,is_completed = @is_completed where Id = @ID";
-       
+
                 SqlCommand command = new SqlCommand(strUpdateCommand, conn);
 
                 command.Parameters.AddWithValue("@Description", bundle.Description);
@@ -205,12 +206,12 @@ namespace PokerDataAcess
                 conn.Open();
 
                 SqlDataAdapter da = new SqlDataAdapter();
-              
+
                 SqlCommand command = new SqlCommand(
                     "DELETE FROM bundles where Id = @Id", conn);
 
                 command.Parameters.Add("@Id", SqlDbType.Int, id);
-             
+
                 da.DeleteCommand = command;
                 int result = da.DeleteCommand.ExecuteNonQuery();
 
