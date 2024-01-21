@@ -1,0 +1,55 @@
+
+In postman go to authorization choose barrier enter "123"  
+
+Get  http://localhost:49687/api/task/GetTasks 
+
+Response : [[{"description":"jkh","completionCriteria":2,"id":23231313,"bundleId":1,"difficultyLevel":2,"completed":true}]
+
+
+Get http://localhost:49687/api/task/{id}  
+
+Response : 
+
+{"description":"jkh","completionCriteria":2,"id":23231313,"bundleId":1,"difficultyLevel":2,"completed":true}
+
+
+
+Post http://localhost:49687/api/task/{id} 
+Body:
+{
+    "description": "test",
+    "completionCriteria": 1,
+    "id": 0,
+    "bundleId": 0,
+    "difficultyLevel": 2,
+    "completed": false
+}
+
+
+Delete http://localhost:49687/api/task/{id}  
+
+
+Get http://localhost:49687/api/bundles/bundles
+
+Response : 
+
+[{"description":"wewe","name":"2222ew","tasks":null,"id":0,"completionCriteria":1,"completed":false}]
+
+Get http://localhost:49687/api/bundles/{id}  
+
+Response :  
+
+[{"description":"wewe","name":"2222ew","tasks":null,"id":0,"completionCriteria":1,"completed":false}]
+
+Post http://localhost:49687/api/bundles
+Body:
+{
+    "description": "test",
+    "completionCriteria": 1,
+    "id": 0,
+    "Name":"test",
+    "completed": false
+}
+
+Delete http://localhost:49687/api/bundles/{id}  
+
