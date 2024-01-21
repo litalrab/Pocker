@@ -1,5 +1,5 @@
 
-In postman go to authorization choose barrier enter "123"  
+In postman go to authorization tab choose barrier enter "123"  
 
 Get  http://localhost:49687/api/task/GetTasks 
 
