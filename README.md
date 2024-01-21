@@ -63,4 +63,5 @@ Copy code
 dotnet run
 
 Usage
-Explore the API using tools like Postman or curl. Refer to the API documentation for details on available endpoints and request/response formats.
+
+Explore the API using tools like Postman or curl. Refer to the API documentation for details on available endpoints and request/response formats.Go to authorization tab choose barrier enter "123"  
