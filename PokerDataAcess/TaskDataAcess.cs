@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -17,7 +17,7 @@ namespace PokerDataAcess
             SqlConnection conn = new SqlConnection(connectionString);
             try
             {
-       
+
                 conn.Open();
 
                 SqlDataAdapter da = new SqlDataAdapter("SELECT * from tasks", conn);
@@ -79,7 +79,7 @@ namespace PokerDataAcess
                     t.Id = Convert.ToInt32(row["Id"]);
                     return t;
                 }
-             
+
             }
             return null;
 
@@ -107,7 +107,7 @@ namespace PokerDataAcess
                         t.Description = Convert.ToString(row["description"]);
                         t.CompletionCriteria = Convert.ToInt32(row["completion_criteria"]);
                         t.BundleId = Convert.ToInt32(row["bundle_id"]);
-                        t.DifficultyLevel = Convert.ToInt32(row["completion_criteria"]);
+                        t.DifficultyLevel = Convert.ToInt32(row["difficulty_level"]);
                         t.Completed = Convert.ToBoolean(row["Completed"]);
                         t.Id = Convert.ToInt32(row["Id"]);
                     }
@@ -124,8 +124,8 @@ namespace PokerDataAcess
 
         public static bool Add(PokerDataAcess.Models.Task task)
         {
-            //string connectionString = ConfigurationManager.ConnectionStrings["DbConn"].ConnectionString;
-            string connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=C:\\USERS\\LITAL\\SOURCE\\REPOS\\POKER\\POKER\\DATABASE.MDF;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+            string connectionString = ConfigurationManager.ConnectionStrings["DbConn"].ConnectionString;
+            // string connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=C:\\USERS\\LITAL\\SOURCE\\REPOS\\POKER\\POKER\\DATABASE.MDF;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
             SqlConnection conn = new SqlConnection(connectionString);
 
             try
@@ -143,7 +143,7 @@ namespace PokerDataAcess
                 command.Parameters.AddWithValue("@CompletionCriteria", task.CompletionCriteria);
                 command.Parameters.AddWithValue("@DifficultyLevel", task.DifficultyLevel);
                 command.Parameters.AddWithValue("@Completed", task.Completed);
-                command.Parameters.AddWithValue("@Bundle_id", 1); //??
+                command.Parameters.AddWithValue("@Bundle_id", task.BundleId);
 
                 da.InsertCommand = command;
                 int result = command.ExecuteNonQuery();
@@ -197,7 +197,7 @@ namespace PokerDataAcess
 
                 return false;
             }
-        
+
         }
 
         public static bool Delete(int id)
