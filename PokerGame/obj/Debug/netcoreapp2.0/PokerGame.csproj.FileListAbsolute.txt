@@ -1,0 +1,16 @@
+C:\Users\Lital\source\repos\PokerGame\PokerGame\bin\Debug\netcoreapp2.0\PokerGame.dll.config
+C:\Users\Lital\source\repos\PokerGame\PokerGame\bin\Debug\netcoreapp2.0\PokerGame.deps.json
+C:\Users\Lital\source\repos\PokerGame\PokerGame\bin\Debug\netcoreapp2.0\PokerGame.runtimeconfig.json
+C:\Users\Lital\source\repos\PokerGame\PokerGame\bin\Debug\netcoreapp2.0\PokerGame.runtimeconfig.dev.json
+C:\Users\Lital\source\repos\PokerGame\PokerGame\bin\Debug\netcoreapp2.0\PokerGame.dll
+C:\Users\Lital\source\repos\PokerGame\PokerGame\bin\Debug\netcoreapp2.0\PokerGame.pdb
+C:\Users\Lital\source\repos\PokerGame\PokerGame\bin\Debug\netcoreapp2.0\PokerDataAcess.dll
+C:\Users\Lital\source\repos\PokerGame\PokerGame\bin\Debug\netcoreapp2.0\PokerDataAcess.pdb
+C:\Users\Lital\source\repos\PokerGame\PokerGame\bin\Debug\netcoreapp2.0\PokerDataAcess.dll.config
+C:\Users\Lital\source\repos\PokerGame\PokerGame\obj\Debug\netcoreapp2.0\PokerGame.csproj.AssemblyReference.cache
+C:\Users\Lital\source\repos\PokerGame\PokerGame\obj\Debug\netcoreapp2.0\PokerGame.csproj.CoreCompileInputs.cache
+C:\Users\Lital\source\repos\PokerGame\PokerGame\obj\Debug\netcoreapp2.0\PokerGame.AssemblyInfoInputs.cache
+C:\Users\Lital\source\repos\PokerGame\PokerGame\obj\Debug\netcoreapp2.0\PokerGame.AssemblyInfo.cs
+C:\Users\Lital\source\repos\PokerGame\PokerGame\obj\Debug\netcoreapp2.0\PokerGame.csproj.CopyComplete
+C:\Users\Lital\source\repos\PokerGame\PokerGame\obj\Debug\netcoreapp2.0\PokerGame.dll
+C:\Users\Lital\source\repos\PokerGame\PokerGame\obj\Debug\netcoreapp2.0\PokerGame.pdb
